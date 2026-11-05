@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush Girish Bhandary | Robotics & Mechanical Engineering</title>
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+          colors: {
+            canvas: '#FAFAFA',
+            surface: '#FFFFFF',
+            borderSubtle: '#E4E4E7',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #FAFAFA;
+      color: #18181B;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection {
+      background-color: #E4E4E7;
+      color: #09090B;
+    }
+    /* Subtle dot grid pattern */
+    .bg-grid {
+      background-size: 32px 32px;
+      background-image: radial-gradient(circle, #E4E4E7 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans relative selection:bg-zinc-200">
+
+  <!-- Subtle Ambient Header Grid -->
+  <div class="absolute inset-x-0 top-0 h-96 bg-grid pointer-events-none opacity-40 [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-zinc-200/80 transition-all duration-200">
+    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="text-sm font-semibold tracking-tight text-zinc-900 hover:text-zinc-600 transition flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-zinc-900 inline-block"></span>
+        <span id="nav-brand-name">Portfolio</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm text-zinc-600 font-medium">
+        <a href="#about" class="hover:text-zinc-900 transition">About</a>
+        <a href="#experience" class="hover:text-zinc-900 transition">Experience</a>
+        <a href="#leadership" class="hover:text-zinc-900 transition">Leadership</a>
+        <a href="#projects" class="hover:text-zinc-900 transition">Projects</a>
+        <a href="#skills" class="hover:text-zinc-900 transition">Skills</a>
+        <a href="#education" class="hover:text-zinc-900 transition">Education</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a id="nav-resume-btn" href="#" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-medium px-3.5 py-1.5 rounded-md bg-zinc-900 text-white hover:bg-zinc-800 transition shadow-xs">
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+          <span>Resume</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-1 max-w-4xl w-full mx-auto px-6 py-12 md:py-20 space-y-24 relative z-10">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="pt-4 md:pt-8 space-y-6">
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-800 border border-emerald-200/80">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span id="hero-status-badge">Available for Opportunities</span>
+      </div>
+
+      <!-- Main Headline -->
+      <div class="space-y-3">
+        <h1 id="hero-name" class="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900">
+          Ayush Girish Bhandary
+        </h1>
+        <p id="hero-title" class="text-lg md:text-xl text-zinc-600 font-normal">
+          Software Engineer & Computer Science Student
+        </p>
+        <p id="hero-location" class="text-xs uppercase tracking-wider text-zinc-400 font-medium flex items-center gap-1.5">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          <span>San Francisco, CA</span>
+        </p>
+      </div>
+
+      <!-- Bio Paragraph -->
+      <p id="hero-bio" class="text-zinc-700 text-base md:text-lg leading-relaxed max-w-2xl font-normal">
+        Hi! I'm a developer passionate about building performant, user-centric web applications and distributed systems.
+      </p>
+
+      <!-- Quick Action & Social Links -->
+      <div class="pt-2 flex flex-wrap items-center gap-3" id="hero-social-links">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- SECTION DIVIDER -->
+    <hr class="border-zinc-200/80" />
+
+    <!-- INTERNSHIP & WORK EXPERIENCE -->
+    <section id="experience" class="space-y-8 scroll-mt-24">
+      <div class="space-y-1">
+        <div class="text-xs font-semibold uppercase tracking-wider text-zinc-400">Career History</div>
+        <h2 class="text-2xl font-bold tracking-tight text-zinc-900">Internship & Work Experience</h2>
+      </div>
+
+      <div id="experience-list" class="space-y-8 relative border-l border-zinc-200 pl-6 ml-2">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- POSITIONS OF RESPONSIBILITY -->
+    <section id="leadership" class="space-y-8 scroll-mt-24">
+      <div class="space-y-1">
+        <div class="text-xs font-semibold uppercase tracking-wider text-zinc-400">Extracurricular & Leadership</div>
+        <h2 class="text-2xl font-bold tracking-tight text-zinc-900">Positions of Responsibility</h2>
+      </div>
+
+      <div id="por-list" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="space-y-8 scroll-mt-24">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div class="space-y-1">
+          <div class="text-xs font-semibold uppercase tracking-wider text-zinc-400">Selected Work</div>
+          <h2 class="text-2xl font-bold tracking-tight text-zinc-900">Featured Projects</h2>
+        </div>
+      </div>
+
+      <div id="projects-list" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section id="skills" class="space-y-8 scroll-mt-24">
+      <div class="space-y-1">
+        <div class="text-xs font-semibold uppercase tracking-wider text-zinc-400">Capabilities</div>
+        <h2 class="text-2xl font-bold tracking-tight text-zinc-900">Technical Skills</h2>
+      </div>
+
+      <div id="skills-list" class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white border border-zinc-200/80 rounded-xl p-6 shadow-xs">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="space-y-8 scroll-mt-24">
+      <div class="space-y-1">
+        <div class="text-xs font-semibold uppercase tracking-wider text-zinc-400">Academic Background</div>
+        <h2 class="text-2xl font-bold tracking-tight text-zinc-900">Education</h2>
+      </div>
+
+      <div id="education-list" class="space-y-6">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section id="contact" class="space-y-6 bg-zinc-900 text-white rounded-2xl p-8 md:p-12 text-center md:text-left relative overflow-hidden">
+      <div class="max-w-xl space-y-3 relative z-10">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Let's connect & collaborate</h2>
+        <p class="text-zinc-400 text-sm md:text-base leading-relaxed">
+          I am always excited to discuss new opportunities, collaborative projects, or innovative engineering ideas.
+        </p>
+        <div class="pt-4 flex flex-wrap items-center gap-3">
+          <a id="cta-email-btn" href="mailto:ayush.bhandary@example.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white text-zinc-900 text-sm font-medium hover:bg-zinc-100 transition shadow-xs">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>Send Email</span>
+          </a>
+          <a id="cta-github-btn" href="https://github.com/ayush-bhandary" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-700 text-zinc-300 text-sm font-medium hover:bg-zinc-800 transition">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>GitHub Profile</span>
+          </a>
+        </div>
+      </div>
+      <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-zinc-800 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-zinc-200/80 bg-white py-8 mt-12">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+      <div id="footer-copyright">
+        © <span id="current-year"></span> Ayush Girish Bhandary. All rights reserved.
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#hero" class="hover:text-zinc-900 transition flex items-center gap-1">
+          <span>Back to top</span>
+          <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DATA & APP LOGIC -->
+  <script src="./portfolio-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
