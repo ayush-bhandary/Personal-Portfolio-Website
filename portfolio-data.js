@@ -88,6 +88,10 @@ window.PORTFOLIO_DATA = {
     {
       title: "Mesh-Based Non-Conformal Monolithic Solvers & Overset/Chimera Meshes",
       status: "Ongoing",
+      images: [
+        "./assets/solver-mesh-1.jpg",
+        "./assets/solver-mesh-2.jpg"
+      ],
       description: "Developing mesh-based non-conformal monolithic numerical solvers for coupled continuum physics. Formulated and built 1D and 2D transient and steady-state heat conduction solvers from scratch, deriving discretized governing equations, flux conservation, and boundary condition handling. Implementing overset / Chimera mesh algorithms with donor-receptor hole-cutting and inter-grid interpolation schemes to interface non-conformal subdomains and complex moving geometries.",
       techStack: ["Non-Conformal Solvers", "Chimera / Overset Meshes", "Computational Heat Transfer", "Numerical Methods", "C++", "MATLAB"],
       githubUrl: "https://github.com/ayush-bhandary",

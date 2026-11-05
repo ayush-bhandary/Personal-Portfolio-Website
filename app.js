@@ -190,11 +190,24 @@ document.addEventListener("DOMContentLoaded", () => {
         statusBadge = `<span class="inline-flex items-center gap-1.5 text-[10px] font-medium px-2 py-0.5 rounded-full bg-zinc-100 text-zinc-600 border border-zinc-200/80 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-zinc-400"></span>Completed</span>`;
       }
 
-      const imageHtml = project.image
-        ? `<div class="w-full h-44 rounded-lg bg-zinc-50/80 border border-zinc-100 flex items-center justify-center p-2.5 overflow-hidden">
+      let imageHtml = "";
+      if (project.images && project.images.length > 0) {
+        imageHtml = `
+          <div class="grid grid-cols-2 gap-2 w-full h-44 rounded-lg bg-zinc-950 border border-zinc-200/80 p-1.5 overflow-hidden">
+            ${project.images.map(img => `
+              <div class="w-full h-full flex items-center justify-center overflow-hidden rounded bg-black/40">
+                <img src="${img}" alt="${project.title}" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" />
+              </div>
+            `).join("")}
+          </div>
+        `;
+      } else if (project.image) {
+        imageHtml = `
+          <div class="w-full h-44 rounded-lg bg-zinc-50/80 border border-zinc-100 flex items-center justify-center p-2.5 overflow-hidden">
             <img src="${project.image}" alt="${project.title}" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </div>`
-        : "";
+          </div>
+        `;
+      }
 
       card.innerHTML = `
         <div class="space-y-3">
