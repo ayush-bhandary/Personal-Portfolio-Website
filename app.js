@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (data.projects && data.projects.length > 0) {
     data.projects.forEach(project => {
       const card = document.createElement("div");
-      card.className = "bg-white border border-zinc-200/80 rounded-xl p-5 shadow-xs hover:border-zinc-300 hover:shadow-sm transition flex flex-col justify-between space-y-4";
+      card.className = "group bg-white border border-zinc-200/80 rounded-xl p-5 shadow-xs hover:border-zinc-300 hover:shadow-sm transition flex flex-col justify-between space-y-4";
 
       const stackHtml = project.techStack && project.techStack.length > 0
         ? `<div class="flex flex-wrap gap-1.5">
@@ -151,20 +151,32 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `<div class="flex items-center gap-4 pt-1">${liveBtn}${githubBtn}</div>`
         : "";
 
-      const statusBadge = project.status
-        ? `<span class="inline-flex items-center gap-1.5 text-[10px] font-medium px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/80 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>${project.status}</span>`
+      let statusBadge = "";
+      if (project.status === "Ongoing") {
+        statusBadge = `<span class="inline-flex items-center gap-1.5 text-[10px] font-medium px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/80 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>Ongoing</span>`;
+      } else if (project.status === "Completed") {
+        statusBadge = `<span class="inline-flex items-center gap-1.5 text-[10px] font-medium px-2 py-0.5 rounded-full bg-zinc-100 text-zinc-600 border border-zinc-200/80 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-zinc-400"></span>Completed</span>`;
+      }
+
+      const imageHtml = project.image
+        ? `<div class="w-full h-44 rounded-lg bg-zinc-50/80 border border-zinc-100 flex items-center justify-center p-2.5 overflow-hidden">
+            <img src="${project.image}" alt="${project.title}" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" />
+          </div>`
         : "";
 
       card.innerHTML = `
-        <div class="space-y-2.5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-base font-semibold text-zinc-900 tracking-tight">${project.title}</h3>
-            <div class="flex items-center gap-1.5 shrink-0">
-              ${statusBadge}
-              ${project.featured ? `<span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-zinc-100 text-zinc-700 border border-zinc-200">Featured</span>` : ""}
+        <div class="space-y-3">
+          ${imageHtml}
+          <div class="space-y-2">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-base font-semibold text-zinc-900 tracking-tight">${project.title}</h3>
+              <div class="flex items-center gap-1.5 shrink-0">
+                ${statusBadge}
+                ${project.featured ? `<span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-zinc-100 text-zinc-700 border border-zinc-200">Featured</span>` : ""}
+              </div>
             </div>
+            <p class="text-xs md:text-sm text-zinc-600 leading-relaxed">${project.description}</p>
           </div>
-          <p class="text-xs md:text-sm text-zinc-600 leading-relaxed">${project.description}</p>
         </div>
 
         <div class="pt-3 border-t border-zinc-100 space-y-3">
