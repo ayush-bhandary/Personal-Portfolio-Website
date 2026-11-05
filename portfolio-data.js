@@ -12,7 +12,7 @@ window.PORTFOLIO_DATA = {
     roleTitle: "Undergraduate Mechanical Engineer • Aerospace & Robotics Enthusiast",
     location: "BITS Pilani, Pilani Campus • Rajasthan, India",
     statusBadge: "Vice Captain & Mechanical Engineer @ CRISS Robotics",
-    bio: "Undergraduate Mechanical Engineering student at BITS Pilani passionate about aerospace systems, rover robotics, structural dynamics, and precision mechanical design. Currently leading mechanical development and operations for CRISS Robotics—the first Indian team to qualify for the Australian Rover Challenge (ARC). Experienced in FEA simulation (HyperMesh, Nastran, ANSYS), rotor blade dynamics at CSIR-NAL, custom cycloidal & BLDC actuator design, and hands-on CNC/FDM manufacturing.",
+    bio: "Mechanical Engineering undergraduate at BITS Pilani passionate about aerospace systems, rover robotics, and precision mechanical design.",
     resumeUrl: "#", // Add your PDF path here when ready, e.g. "Ayush_Bhandary_Resume.pdf"
     email: "f20220000@pilani.bits-pilani.ac.in", // Placeholder or personal email
     githubRepoUrl: "https://github.com/ayush-bhandary/Personal-Portfolio-Website",
