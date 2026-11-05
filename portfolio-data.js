@@ -15,18 +15,31 @@ window.PORTFOLIO_DATA = {
     bio: "Mechanical Engineering undergraduate at BITS Pilani passionate about aerospace systems, rover robotics, and precision mechanical design.",
     avatarUrl: "./assets/profile.jpg",
     resumeUrl: "#", // Add your PDF path here when ready, e.g. "Ayush_Bhandary_Resume.pdf"
-    email: "f20220000@pilani.bits-pilani.ac.in", // Placeholder or personal email
+    email: "f20240492@pilani.bits-pilani.ac.in",
     githubRepoUrl: "https://github.com/ayush-bhandary/Personal-Portfolio-Website",
     socials: [
       { name: "GitHub", url: "https://github.com/ayush-bhandary", icon: "github" },
       { name: "Portfolio Repo", url: "https://github.com/ayush-bhandary/Personal-Portfolio-Website", icon: "code" },
       { name: "LinkedIn", url: "https://linkedin.com", icon: "linkedin" },
-      { name: "Email", url: "mailto:ayush.bhandary@example.com", icon: "mail" }
+      { name: "Email", url: "mailto:f20240492@pilani.bits-pilani.ac.in", icon: "mail" }
     ]
   },
 
   // 2. Internship & Research Experience
   experience: [
+    {
+      role: "Undergraduate Researcher",
+      company: "BITS Pilani",
+      companyUrl: "https://www.bits-pilani.ac.in",
+      location: "Pilani, India",
+      period: "Ongoing",
+      highlights: [
+        "Developing mesh-based non-conformal monolithic numerical solvers for coupled continuum physics.",
+        "Built 1D and 2D heat conduction solvers from scratch, formulating discretized governing equations, flux conservation, and boundary condition handling.",
+        "Developing overset / Chimera mesh algorithms with donor-receptor hole-cutting and inter-grid interpolation schemes to interface non-conformal subdomains and complex geometries."
+      ],
+      skills: ["Non-Conformal Solvers", "Chimera / Overset Meshes", "Computational Heat Transfer", "Numerical Methods", "C++ / MATLAB"]
+    },
     {
       role: "Research Intern (Practice School I)",
       company: "CSIR – National Aerospace Laboratories (CSIR-NAL)",
@@ -146,21 +159,22 @@ window.PORTFOLIO_DATA = {
 
   // 5. Technical Skills
   skills: {
-    "Simulation & Structural FEA": [
+    "Computational Mechanics & Solvers": [
+      "Non-Conformal Solvers",
+      "Overset / Chimera Meshes",
+      "Finite Element Analysis (FEA)",
       "ANSYS Mechanical",
       "Altair HyperMesh",
       "MSC Nastran",
-      "Finite Element Analysis (FEA)",
-      "Topology Optimization",
-      "Modal & Vibration Analysis"
+      "Topology Optimization"
     ],
     "Aerodynamics & Thermal Fluids": [
       "Compressible Flow / CFD",
+      "Computational Heat Transfer",
       "Gas Dynamics",
       "Blade Element Momentum Theory (BEMT)",
       "Shock & Expansion Wave Theory",
-      "Campbell Diagram Analysis",
-      "Timoshenko Beam Dynamics"
+      "Campbell Diagram Analysis"
     ],
     "Robotics & Control Systems": [
       "AI for Robotics",
