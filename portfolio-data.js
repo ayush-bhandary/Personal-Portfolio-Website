@@ -25,7 +25,7 @@ window.PORTFOLIO_DATA = {
     ]
   },
 
-  // 2. Internship & Research Experience
+  // 2. Internships & Research Experience
   experience: [
     {
       role: "Undergraduate Researcher",
@@ -41,13 +41,13 @@ window.PORTFOLIO_DATA = {
       skills: ["Non-Conformal Solvers", "Chimera / Overset Meshes", "Computational Heat Transfer", "Numerical Methods", "C++ / MATLAB"]
     },
     {
-      role: "Research Intern (Practice School I)",
+      role: "Research Intern • UAV Division",
       company: "CSIR – National Aerospace Laboratories (CSIR-NAL)",
       companyUrl: "https://www.nal.res.in",
       location: "Bengaluru, India",
-      period: "Practice School I",
+      period: "Internship",
       highlights: [
-        "Conducted vibration and modal analysis of composite helicopter rotor blades using Altair HyperMesh and MSC Nastran, establishing a structural simulation framework for CSIR-NAL's upcoming Urban Air Taxi program.",
+        "Conducted vibration and modal analysis of composite rotor blades using Altair HyperMesh and MSC Nastran, establishing a structural simulation framework for CSIR-NAL's Unmanned Aerial Vehicles (UAV) Division and Urban Air Taxi program.",
         "Formulated and implemented rotating blade dynamics in MATLAB using a coupled Timoshenko beam model (flapwise, lead-lag, and torsional modes) accounting for centrifugal stiffening effects.",
         "Generated Campbell diagrams to identify critical frequencies, avoid resonant crossings across operating RPM ranges, and resolved discrepancies between FEA and analytical natural frequency predictions.",
         "Programmed Momentum Theory, Blade Element Theory (BET), and Blade Element Momentum Theory (BEMT) in MATLAB to calculate spanwise induced velocity and aerodynamic load distributions."
@@ -85,6 +85,15 @@ window.PORTFOLIO_DATA = {
 
   // 4. Projects Showcase
   projects: [
+    {
+      title: "Mesh-Based Non-Conformal Monolithic Solvers & Overset/Chimera Meshes",
+      status: "Ongoing",
+      description: "Developing mesh-based non-conformal monolithic numerical solvers for coupled continuum physics. Formulated and built 1D and 2D transient and steady-state heat conduction solvers from scratch, deriving discretized governing equations, flux conservation, and boundary condition handling. Implementing overset / Chimera mesh algorithms with donor-receptor hole-cutting and inter-grid interpolation schemes to interface non-conformal subdomains and complex moving geometries.",
+      techStack: ["Non-Conformal Solvers", "Chimera / Overset Meshes", "Computational Heat Transfer", "Numerical Methods", "C++", "MATLAB"],
+      githubUrl: "https://github.com/ayush-bhandary",
+      liveUrl: "",
+      featured: true
+    },
     {
       title: "CRISS Rover: Steering Pivot & Optimized Wheel Assembly",
       status: "Ongoing",
