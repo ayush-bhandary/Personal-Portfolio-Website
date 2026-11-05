@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("hero-status-badge").textContent = data.personal.statusBadge || "Available for Opportunities";
   document.getElementById("hero-bio").textContent = data.personal.bio || "";
   
+  if (data.personal.avatarUrl) {
+    const avatarEl = document.getElementById("hero-avatar");
+    if (avatarEl) {
+      avatarEl.src = data.personal.avatarUrl;
+    }
+  }
+
   if (data.personal.resumeUrl && data.personal.resumeUrl !== "#") {
     document.getElementById("nav-resume-btn").href = data.personal.resumeUrl;
   }

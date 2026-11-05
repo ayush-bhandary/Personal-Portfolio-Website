@@ -13,6 +13,7 @@ window.PORTFOLIO_DATA = {
     location: "BITS Pilani, Pilani Campus • Rajasthan, India",
     statusBadge: "Vice Captain & Mechanical Engineer @ CRISS Robotics",
     bio: "Mechanical Engineering undergraduate at BITS Pilani passionate about aerospace systems, rover robotics, and precision mechanical design.",
+    avatarUrl: "./assets/profile.jpg",
     resumeUrl: "#", // Add your PDF path here when ready, e.g. "Ayush_Bhandary_Resume.pdf"
     email: "f20220000@pilani.bits-pilani.ac.in", // Placeholder or personal email
     githubRepoUrl: "https://github.com/ayush-bhandary/Personal-Portfolio-Website",
