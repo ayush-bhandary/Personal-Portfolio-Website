@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 1. Personal & Hero Section
-  document.getElementById("nav-brand-name").textContent = data.personal.name || "Portfolio";
+  document.getElementById("nav-brand-name").textContent = data.personal.name || "Ayush Girish Bhandary";
   document.getElementById("hero-name").textContent = data.personal.name || "";
   document.getElementById("hero-title").textContent = data.personal.roleTitle || "";
   document.getElementById("hero-location").innerHTML = `
@@ -144,11 +144,18 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `<div class="flex items-center gap-4 pt-1">${liveBtn}${githubBtn}</div>`
         : "";
 
+      const statusBadge = project.status
+        ? `<span class="inline-flex items-center gap-1.5 text-[10px] font-medium px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/80 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>${project.status}</span>`
+        : "";
+
       card.innerHTML = `
         <div class="space-y-2.5">
-          <div class="flex items-start justify-between gap-2">
+          <div class="flex items-start justify-between gap-3">
             <h3 class="text-base font-semibold text-zinc-900 tracking-tight">${project.title}</h3>
-            ${project.featured ? `<span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-zinc-100 text-zinc-700 border border-zinc-200">Featured</span>` : ""}
+            <div class="flex items-center gap-1.5 shrink-0">
+              ${statusBadge}
+              ${project.featured ? `<span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-zinc-100 text-zinc-700 border border-zinc-200">Featured</span>` : ""}
+            </div>
           </div>
           <p class="text-xs md:text-sm text-zinc-600 leading-relaxed">${project.description}</p>
         </div>
@@ -188,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
       card.className = "bg-white border border-zinc-200/80 rounded-xl p-5 shadow-xs space-y-3";
 
       const courseworkHtml = edu.coursework && edu.coursework.length > 0
-        ? `<div class="pt-2 text-xs text-zinc-600">
+        ? `<div class="pt-2 text-xs text-zinc-600 leading-relaxed">
             <span class="font-medium text-zinc-800">Relevant Coursework:</span> ${edu.coursework.join(", ")}
           </div>`
         : "";
@@ -217,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("cta-github-btn").href = githubSocial.url;
   }
   document.getElementById("current-year").textContent = new Date().getFullYear();
-  document.getElementById("footer-copyright").innerHTML = `© ${new Date().getFullYear()} ${data.personal.name || "Portfolio"}. All rights reserved.`;
+  document.getElementById("footer-copyright").innerHTML = `© ${new Date().getFullYear()} ${data.personal.name || "Ayush Girish Bhandary"}. All rights reserved.`;
 
   // Render icons
   if (window.lucide) {
