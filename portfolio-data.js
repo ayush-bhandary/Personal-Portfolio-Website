@@ -70,12 +70,44 @@ window.PORTFOLIO_DATA = {
   // 4. Projects Showcase
   projects: [
     {
+      title: "Supersonic Flow over a Circular-Arc Hump (Compressible CFD)",
+      description: "Modelled 2D compressible supersonic airflow (inlet Mach M₁ = 2.5) over a circular-arc hump using CFD. Computed static pressure distributions and pressure coefficients (Cp) along the hump surface. Compared numerical CFD results against analytical Oblique Shock & Expansion Wave Theory as well as Linearized Supersonic Flow Theory. Generated detailed contours of static pressure, stagnation temperature, and local Mach number distributions.",
+      techStack: ["CFD Simulation", "Compressible Flow", "Gas Dynamics", "Shock-Expansion Theory", "Linearized Aerodynamics"],
+      githubUrl: "https://github.com/ayush-bhandary",
+      liveUrl: "",
+      featured: true
+    },
+    {
+      title: "Spacecraft Propulsion Anomaly Diagnosis & Health Monitoring (ISRO PHM)",
+      description: "Developed machine learning pipelines for Prognostics and Health Management (PHM) on high-frequency (1 kHz) multi-channel pressure telemetry from an experimental spacecraft propulsion simulation rig (water hammer & acoustic modes across 4 thruster solenoid valves). Implemented models across 5 core diagnostics: binary normal/abnormal classification, bubble contamination anomaly detection & 8-point spatial localization, solenoid valve failure identification, valve opening ratio regression (0%–100%), and unknown anomaly isolation across unseen spacecraft units.",
+      techStack: ["Python", "Time-Series Data Mining", "Signal Processing", "Feature Extraction", "ISRO Propulsion PHM"],
+      githubUrl: "https://github.com/ayush-bhandary",
+      liveUrl: "",
+      featured: true
+    },
+    {
+      title: "Real-Time Adaptive Frequency Hopf Oscillator on RP2040",
+      description: "Engineered an embedded real-time Adaptive Frequency Hopf Oscillator on an RP2040 microcontroller interfacing with a digital accelerometer (KXTJ3-1057 / BMA400). Programmed nonlinear dynamical learning rules to continuously track and phase-lock to rhythmic real-world motion signals in real-time. Conducted frequency spectrum verification in MATLAB, quantified adaptation lag across varying coupling strengths (ε) and learning factors (ν), and implemented multi-oscillator banks (M) with variable intrinsic frequencies.",
+      techStack: ["C++ / Arduino", "RP2040 Microcontroller", "Accelerometers", "MATLAB", "Adaptive Oscillators"],
+      githubUrl: "https://github.com/ayush-bhandary",
+      liveUrl: "",
+      featured: true
+    },
+    {
+      title: "Pedestrian Dead Reckoning & IMU Sensor Fusion with Kalman Filtering",
+      description: "Designed an inertial pedestrian tracking and navigation pipeline using foot-mounted accelerometer and gyroscope telemetry. Evaluated cubic trajectory drift and error accumulation resulting from double integration of unconstrained acceleration data. Developed a Kalman Filter and multi-sensor fusion algorithms combining accelerometer and gyroscope streams to eliminate drift, reconstruct walking paths, and analyze gait mechanics.",
+      techStack: ["MATLAB", "Kalman Filtering", "Sensor Fusion", "IMU & Inertial Navigation", "Dead Reckoning"],
+      githubUrl: "https://github.com/ayush-bhandary",
+      liveUrl: "",
+      featured: true
+    },
+    {
       title: "CRISS Rover: Steering Pivot & Optimized Wheel Assembly",
       description: "Engineered an independent steering pivot assembly and lightweight wheels for high-mobility Martian/Lunar terrain traversal at the Australian Rover Challenge (ARC). Applied topology optimization to the gearbox-to-wheel coupler in ANSYS Mechanical, reducing weight by 40% (Factor of Safety = 3). Programmed custom CAM G-code to CNC machine couplers in-house, cutting costs by 50%. Engineered hollow-spoke wheel hubs with a dual-material PETG-core and flexible TPU-shell (+30% diameter) for enhanced traction on fine sand.",
       techStack: ["ANSYS Mechanical", "Topology Optimization", "Fusion 360", "CNC / CAM", "TPU / PETG Prototyping"],
       githubUrl: "https://github.com/ayush-bhandary",
       liveUrl: "",
-      featured: true
+      featured: false
     },
     {
       title: "CRISS Rover: 6-DOF Robotic Manipulator",
@@ -83,7 +115,7 @@ window.PORTFOLIO_DATA = {
       techStack: ["Actuator Design", "Cycloidal Drives", "BLDC Systems", "SolidWorks", "Experimental Test Rigs"],
       githubUrl: "https://github.com/ayush-bhandary",
       liveUrl: "",
-      featured: true
+      featured: false
     },
     {
       title: "Inspired Karters Gravity: Competition Go-Kart Chassis & Dynamics",
@@ -91,7 +123,7 @@ window.PORTFOLIO_DATA = {
       techStack: ["Chassis Design", "Structural FEA", "TIG/MIG Welding", "Vehicle Dynamics", "GKDC 2026 Driver"],
       githubUrl: "https://github.com/ayush-bhandary",
       liveUrl: "",
-      featured: true
+      featured: false
     },
     {
       title: "Helicopter Blade Dynamics & BEMT Aero Solver",
@@ -113,32 +145,33 @@ window.PORTFOLIO_DATA = {
       "Topology Optimization",
       "Modal & Vibration Analysis"
     ],
-    "Aerodynamics & Rotor Dynamics": [
+    "Aerodynamics & Thermal Fluids": [
+      "Compressible Flow / CFD",
+      "Gas Dynamics",
       "Blade Element Momentum Theory (BEMT)",
-      "Momentum Theory",
-      "Blade Element Theory (BET)",
+      "Shock & Expansion Wave Theory",
       "Campbell Diagram Analysis",
-      "Coupled Timoshenko Beam Dynamics"
+      "Timoshenko Beam Dynamics"
     ],
-    "CAD & Mechanical Design": [
+    "Robotics & Control Systems": [
+      "AI for Robotics",
+      "Adaptive Hopf Oscillators",
+      "Kalman Filtering & Sensor Fusion",
+      "Inertial Navigation (IMU)",
+      "Cycloidal Actuators & BLDC Drives"
+    ],
+    "CAD & Manufacturing": [
       "Fusion 360",
       "SolidWorks",
       "CATIA",
-      "Cycloidal Actuators",
-      "Mechanism Synthesis",
-      "GD&T"
-    ],
-    "Manufacturing & Fabrication": [
       "CNC Machining (CAM / G-code)",
-      "3D Printing / FDM (TPU 95A, PETG, PA12)",
-      "Welding & Metal Fabrication",
-      "Rapid Prototyping",
-      "Experimental Test Rigs"
+      "3D Printing / FDM (TPU, PETG, PA12)",
+      "Welding & Rapid Prototyping"
     ],
-    "Programming & Computing": [
+    "Programming & Data Mining": [
       "MATLAB",
-      "C++",
-      "Python",
+      "C++ / Arduino",
+      "Python (Time-Series & ML)",
       "C",
       "LaTeX"
     ]
@@ -153,13 +186,21 @@ window.PORTFOLIO_DATA = {
       period: "Undergraduate",
       gpa: "Pilani Campus",
       coursework: [
+        "Gas Dynamics",
+        "AI for Robotics",
+        "Machines and Mechanisms",
         "Mechanics of Solids",
-        "Kinematics & Dynamics of Machinery",
+        "Advanced Mechanics of Solids",
+        "Data Mining in Mechanical Sciences",
         "Fluid Mechanics",
-        "Finite Element Methods",
-        "Control Systems",
-        "Computer-Aided Design (CAD)",
-        "Thermodynamics & Heat Transfer"
+        "Materials Science and Engineering",
+        "Applied Thermodynamics",
+        "Thermodynamics",
+        "Heat Transfer",
+        "Manufacturing Processes",
+        "Advanced Manufacturing Processes",
+        "Mathematics I, II & III",
+        "Probability and Statistics"
       ]
     }
   ]
