@@ -63,6 +63,7 @@ window.PORTFOLIO_DATA = {
       organization: "CRISS Robotics (BITS Pilani)",
       location: "Pilani Campus",
       period: "Ongoing",
+      image: "./assets/criss-team.jpg",
       highlights: [
         "Leading the flagship student rover team competing at the Australian Rover Challenge (ARC, Adelaide) and International Rover Challenge (IRC); CRISS Robotics was the first Indian team in history to qualify for the ARC.",
         "Overseeing multi-subsystem integration, project budgets, engineering timelines, and technical documentation.",
@@ -74,6 +75,7 @@ window.PORTFOLIO_DATA = {
       organization: "CRISS Robotics (BITS Pilani)",
       location: "Pilani Campus",
       period: "Ongoing",
+      video: "./assets/criss-mechanical-lead.mp4",
       highlights: [
         "Directing the mechanical engineering division, reviewing CAD models, GD&T, FEA structural stress verifications, and DFM (Design for Manufacturing) prior to physical production.",
         "Coordinating subsystem workflows across chassis, pivot assemblies, robotic manipulators, and wheel drives to ensure zero fabrication bottlenecks and competition-ready reliability."

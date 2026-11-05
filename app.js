@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (data.positionsOfResponsibility && data.positionsOfResponsibility.length > 0) {
     data.positionsOfResponsibility.forEach(por => {
       const card = document.createElement("div");
-      card.className = "bg-white border border-zinc-200/80 rounded-xl p-5 shadow-xs hover:border-zinc-300 transition space-y-3";
+      card.className = "group bg-white border border-zinc-200/80 rounded-xl p-5 shadow-xs hover:border-zinc-300 hover:shadow-sm transition flex flex-col justify-between space-y-4";
 
       const highlightsHtml = por.highlights && por.highlights.length > 0
         ? `<ul class="space-y-1.5 text-xs text-zinc-600 list-disc list-outside ml-4">
@@ -105,15 +105,47 @@ document.addEventListener("DOMContentLoaded", () => {
           </ul>`
         : "";
 
-      card.innerHTML = `
-        <div class="flex items-start justify-between gap-2">
-          <div>
-            <h3 class="text-sm font-semibold text-zinc-900">${por.title}</h3>
-            <p class="text-xs font-medium text-zinc-500">${por.organization}</p>
+      let mediaHtml = "";
+      if (por.video) {
+        mediaHtml = `
+          <div class="w-full h-44 rounded-lg overflow-hidden bg-zinc-900 border border-zinc-200/80 relative">
+            <video 
+              src="${por.video}" 
+              autoplay 
+              loop 
+              muted 
+              playsinline 
+              class="w-full h-full object-cover"
+            ></video>
           </div>
-          <span class="text-[11px] font-mono text-zinc-400 whitespace-nowrap">${por.period}</span>
+        `;
+      } else if (por.image) {
+        mediaHtml = `
+          <div class="w-full h-44 rounded-lg overflow-hidden bg-zinc-100 border border-zinc-200/80 relative overflow-hidden">
+            <img 
+              src="${por.image}" 
+              alt="${por.title}" 
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+              loading="lazy" 
+            />
+          </div>
+        `;
+      }
+
+      card.innerHTML = `
+        <div class="space-y-3">
+          ${mediaHtml}
+          <div class="space-y-2">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <h3 class="text-sm font-semibold text-zinc-900">${por.title}</h3>
+                <p class="text-xs font-medium text-zinc-500">${por.organization}</p>
+              </div>
+              <span class="text-[11px] font-mono text-zinc-400 whitespace-nowrap">${por.period}</span>
+            </div>
+            ${highlightsHtml}
+          </div>
         </div>
-        ${highlightsHtml}
       `;
       porContainer.appendChild(card);
     });
